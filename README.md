@@ -1,0 +1,3 @@
+# MyAsynHttpClient
+对AsynHttpClient的封装，参考了Coding Android客户端
+以后会增加更多功能
