@@ -1,7 +1,9 @@
 package basti.coryphaei.com.learncoding;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 
 import com.loopj.android.http.RequestParams;
 
@@ -14,6 +16,8 @@ public class BaseActivity extends ActionBarActivity implements NetworkCallback{
 
     protected NetworkUtils networkUtils;
     protected RequestParams params;
+    private ProgressDialog progressDialog;
+    private ToastUtils mToastUtils;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +29,30 @@ public class BaseActivity extends ActionBarActivity implements NetworkCallback{
     private void initVariable() {
         networkUtils = new NetworkUtils(this);
         params = new RequestParams();
+        progressDialog = new ProgressDialog(this);
+        mToastUtils = new ToastUtils(this);
+    }
+
+    //显示进度条消息
+    protected void showProgressMessage(boolean isShow,String message){
+        if (isShow){
+            progressDialog.setMessage(message);
+            progressDialog.show();
+        }else {
+            progressDialog.hide();
+        }
+    }
+
+    protected void showProgressMessage(boolean isShow){
+        showProgressMessage(isShow,"");
+    }
+
+    protected void showBottomToast(String message){
+        mToastUtils.showBottomToast(message);
+    }
+
+    protected void showMiddleToast(String message){
+        mToastUtils.showMiddleToast(message);
     }
 
     //get方法
@@ -39,6 +67,5 @@ public class BaseActivity extends ActionBarActivity implements NetworkCallback{
 
     @Override
     public void parseJson(JSONObject respanse) {
-
     }
 }

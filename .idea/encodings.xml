@@ -2,8 +2,11 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/src/main/java/basti/coryphaei/com/learncoding/BaseActivity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/basti/coryphaei/com/learncoding/MainActivity.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/basti/coryphaei/com/learncoding/MyAsynHttpClient.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/basti/coryphaei/com/learncoding/NetworkCallback.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/basti/coryphaei/com/learncoding/NetworkUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/basti/coryphaei/com/learncoding/SingleToastUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/basti/coryphaei/com/learncoding/ToastUtils.java" charset="UTF-8" />
   </component>
 </project>
